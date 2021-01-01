@@ -1,9 +1,8 @@
-import "./collection-preview.styles.scss";
-import CollectionItem from "../collection-item/collection-item.component";
+import './collection-preview.styles.scss';
+import CollectionItem from '../collection-item/collection-item.component';
 
 export default function CollectionPreview(props) {
   const { title, items } = props;
-  console.log("-->", props);
   return (
     <div className="collection-preview">
       <h1 className="title">{title.toUpperCase()}</h1>

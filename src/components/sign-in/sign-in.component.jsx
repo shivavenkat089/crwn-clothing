@@ -1,14 +1,14 @@
-import { Component } from "react";
-import "./sign-in.styles.scss";
-import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import { Component } from 'react';
+import './sign-in.styles.scss';
+import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
 class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     };
   }
   handleChange = (event) => {
@@ -20,8 +20,8 @@ class SignIn extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     });
   };
   render() {

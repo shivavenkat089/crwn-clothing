@@ -1,4 +1,4 @@
-import "./form-input.styles.scss";
+import './form-input.styles.scss';
 
 const FormInput = ({ handleChange, label, ...restFormInputProps }) => (
   <div className="group">
@@ -10,7 +10,7 @@ const FormInput = ({ handleChange, label, ...restFormInputProps }) => (
     {label ? (
       <label
         className={`${
-          restFormInputProps.value.length > 0 ? "shrink" : ""
+          restFormInputProps.value.length > 0 ? 'shrink' : ''
         } form-input-label`}
       >
         {label}

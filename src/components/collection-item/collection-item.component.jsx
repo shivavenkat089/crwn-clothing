@@ -1,4 +1,4 @@
-import "./collection-item.styles.scss";
+import './collection-item.styles.scss';
 
 const CollectionItem = (props) => {
   const { name, price, imageUrl } = props;
@@ -17,4 +17,5 @@ const CollectionItem = (props) => {
     </div>
   );
 };
+
 export default CollectionItem;
