@@ -15,12 +15,13 @@ class App extends Component {
     };
   }
   unsubscribeFromAuth = null;
+  unsubscribeFromSnapShot = null;
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       console.log('User auth-->', userAuth);
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
-        userRef.onSnapshot((snapShot) => {
+        this.unsubscribeFromSnapShot = userRef.onSnapshot((snapShot) => {
           this.setState({
             currentUser: {
               id: snapShot.id,
@@ -38,6 +39,9 @@ class App extends Component {
   }
   componentWillUnmount() {
     this.unsubscribeFromAuth();
+    if (this.unsubscribeFromSnapShot) {
+      this.unsubscribeFromSnapShot();
+    }
   }
   render() {
     return (
