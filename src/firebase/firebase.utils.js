@@ -24,10 +24,8 @@ export const signInWithGoogle = () => {
   auth
     .signInWithPopup(provider)
     .then((result) => {
-      let credential = result.credential;
-      let token = credential.accessToken;
       let user = result.user;
-      console.log('success-->', token, user, result);
+      console.log('success-->', user);
     })
     .catch((error) => {
       let errorCode = error.code;
