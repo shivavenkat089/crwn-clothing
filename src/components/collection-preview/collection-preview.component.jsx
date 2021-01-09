@@ -7,8 +7,8 @@ export default function CollectionPreview(props) {
     <div className="collection-preview">
       <h1 className="title">{title.toUpperCase()}</h1>
       <div className="preview">
-        {items.slice(0, 4).map(({ id, ...otherItemProps }) => (
-          <CollectionItem key={`item-${id}`} {...otherItemProps} />
+        {items.slice(0, 4).map((item) => (
+          <CollectionItem key={`item-${item.id}`} item={item} />
         ))}
       </div>
     </div>
