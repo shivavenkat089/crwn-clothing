@@ -1,8 +1,10 @@
 import { Component } from 'react';
-import SECTIONS_DATA from '../../data/sections.data';
-import MenuItem from '../menu-item/menu-item.component';
 
 import './directory.styles.scss';
+
+import MenuItem from '../menu-item/menu-item.component';
+
+import SECTIONS_DATA from '../../data/sections.data';
 
 class Directory extends Component {
   constructor() {

@@ -1,4 +1,5 @@
 import './collection-preview.styles.scss';
+
 import CollectionItem from '../collection-item/collection-item.component';
 
 export default function CollectionPreview(props) {
